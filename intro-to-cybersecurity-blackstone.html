@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blackstone Legal: Cybersecurity Awareness and Threat Assessment Report</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23050505'/><text x='50' y='68' font-family='monospace' font-size='48' font-weight='bold' fill='%2300ff41' text-anchor='middle'>OZI</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+<script>
+
+  /*
+  ==============================================================
+  YOUR PROJECT DETAILS -- EDIT THIS SECTION ONLY
+  ==============================================================
+  Everything you need to fill in is marked with REPLACE.
+  DO NOT edit anything below the closing comment block.
+  ==============================================================
+  */
+
+  const PROJECT = {
+
+    title:    "Blackstone Legal: Cybersecurity Awareness and Threat Assessment Report",
+    category: "cybersecurity",
+    status:   "live",
+    author:   "Ozioma Inya",       // REPLACE with your name
+    date:     "July, 2023",          // REPLACE e.g. "January, 2025"
+
+    overview: "A professional cybersecurity awareness and threat assessment report produced for Blackstone Legal, a mid-sized law firm handling sensitive client data, confidential case files, and privileged communications. Commissioned after the firm's managing partner identified growing concern about targeted cyberattacks on legal practices. The report covers the threat landscape facing law firms, common attack techniques, data and privacy protection measures, organisational security frameworks, and recommended next steps. Completed as part of Cisco Networking Academy Junior Cybersecurity Analyst career path.",
+
+    client: {
+      name:     "Blackstone Legal",
+      industry: "Legal Services",
+      size:     "Mid-sized law firm: 45 staff, 12 partners",
+      concern:  "Sensitive client data, privileged communications, and confidential case files",
+      trigger:  "A competitor firm in the same city suffered a ransomware attack that locked all case files for 11 days. Blackstone's managing partner commissioned this report as a precautionary assessment.",
+    },
+
+    objectives: [
+      "Assess the current cybersecurity threat landscape as it specifically applies to legal services organisations",
+      "Identify and classify the most likely attack types targeting law firms and their staff",
+      "Evaluate how Blackstone Legal should protect client data, privileged communications, and staff privacy",
+      "Recommend an organisational security framework and policies appropriate for a legal practice",
+      "Outline the cybersecurity skills and roles the firm should consider as it builds its security posture",
+    ],
+
+    skills: [
+      "Threat Landscape Analysis", "Industry-Specific Risk Assessment", "Attack Classification",
+      "Social Engineering Awareness", "Ransomware Analysis", "Legal Data Protection",
+      "Attorney-Client Privilege Security", "GDPR Compliance", "CIA Triad",
+      "Authentication Methods", "Encryption", "Security Policy Design",
+      "Incident Response", "NIST Framework", "Cybersecurity Career Pathways",
+    ],
+
+    parts: [
+      {
+        module:   "PART 01",
+        title:    "The Cybersecurity Landscape for Legal Practices",
+        subtitle: "Why law firms are high-value targets and what the current threat environment looks like",
+        content: [
+          {
+            heading: "Why Law Firms Are Prime Targets",
+            body: "Law firms occupy a uniquely dangerous position in the cybersecurity threat landscape. They hold some of the most sensitive data in existence; confidential client communications, pending litigation strategies, merger and acquisition details, intellectual property, and privileged legal advice. Attackers know that this data has high value to competitors, opposing parties, nation-states, and criminal organisations. A 2022 American Bar Association survey found that 27% of law firms reported a security breach at some point and that figure is widely considered an undercount given how many breaches go undetected or unreported.",
+          },
+          {
+            heading: "The Scale of the Problem in Legal Services",
+            body: "The legal sector has seen a sharp increase in targeted attacks over the past five years. High-profile incidents include the 2016 Panama Papers leak where 11.5 million documents from the law firm, Mossack Fonseca and multiple ransomware attacks on mid-sized firms that resulted in weeks of operational downtime. For Blackstone Legal, the incident at a nearby competitor firm is not an isolated event. It is part of a documented pattern of ransomware groups specifically targeting legal practices, knowing that the pressure to restore access to case files quickly makes them likely to pay.",
+          },
+          {
+            heading: "Current Threat Trends Affecting Legal Practices",
+            body: "Four trends are particularly relevant to Blackstone Legal. First, ransomware-as-a-service has lowered the barrier to entry for attackers. Criminal groups now offer ransomware tools to affiliates who split the ransom. Second, business email compromise (BEC) attacks target law firm accounts specifically to intercept client fund transfers. Third, supply chain attacks on legal software vendors (case management systems, document platforms) create indirect entry points. Fourth, the shift to hybrid working has expanded the attack surface. Staff accessing case files from home networks and personal devices creates exposure that did not exist in a fully office-based environment.",
+          },
+          {
+            heading: "Regulatory Context",
+            body: "Blackstone Legal operates under a dual compliance obligation. GDPR requires the firm to protect personal data of clients and staff, notify the Information Commissioner's Office within 72 hours of a breach, and maintain records of processing activities. The Solicitors Regulation Authority (SRA) Code of Conduct requires firms to protect client confidentiality and maintain proper systems for handling client money and data. A breach that violates either obligation could result in regulatory fines, professional sanctions, and irreparable reputational damage.",
+          },
+        ],
+      },
+      {
+        module:   "PART 02",
+        title:    "Attack Types Targeting Blackstone Legal",
+        subtitle: "The specific techniques most likely to be used against a law firm of this profile",
+        content: [
+          {
+            heading: "Spear Phishing: The Primary Vector",
+            body: "Generic phishing sends the same email to millions of recipients. Spear phishing targets specific individuals with carefully researched, personalised messages. For a law firm, attackers research publicly available information such as LinkedIn profiles, court records, company websites to craft emails that appear to come from clients, courts, opposing counsel, or regulatory bodies. A partner receiving what appears to be a message from a long-standing client about an urgent matter is far more likely to click a link or open an attachment than a general staff member receiving a generic phishing email. Blackstone Legal staff, particularly partners and secretaries handling correspondence, are the primary target population for this attack type.",
+          },
+          {
+            heading: "Ransomware: The Existential Threat",
+            body: "Ransomware encrypts files and demands payment for the decryption key. For a law firm, the impact is acute: case files, client records, contracts, court submissions, and communications all become inaccessible simultaneously. Modern ransomware groups also practice double extortion where they exfiltrate data before encrypting it, then threaten to publish sensitive client information publicly if the ransom is not paid. For Blackstone Legal, the exposure of privileged client communications under double extortion would likely cause clients to leave the firm regardless of whether the ransom is paid.",
+          },
+          {
+            heading: "Business Email Compromise (BEC)",
+            body: "BEC attacks compromise or spoof a legitimate email account to redirect financial transactions. In legal services, the most common variant involves intercepting conveyancing transactions. An attacker monitors email communications, identifies a property purchase nearing completion, and sends a spoofed email from what appears to be the firm's account instructing the client to transfer completion funds to a new bank account. These attacks result in significant direct financial loss and civil liability. The SRA has issued multiple warnings about this attack type specifically targeting conveyancing practices.",
+          },
+          {
+            heading: "Insider Threats",
+            body: "Not all threats come from outside. Disgruntled employees, departing staff downloading client data, or employees being manipulated by external parties all represent insider risks. For a law firm, the consequences of an insider breach are compounded by attorney-client privilege considerations. The firm may have limited ability to fully investigate or disclose an insider breach without inadvertently waiving privilege over affected communications.",
+          },
+          {
+            heading: "Physical and Social Engineering Attacks",
+            body: "Tailgating (following an authorised person through a secure door), pretexting (fabricating a scenario to extract information over the phone), and baiting (leaving USB drives in the car park) are all relevant physical and social engineering vectors. Reception staff and personal assistants are frequently targeted with pretexting calls impersonating clients, courts, or regulatory bodies requesting urgent information. Physical security of the office, particularly server rooms, printing facilities, and document storage must be considered alongside digital controls.",
+          },
+        ],
+      },
+      {
+        module:   "PART 03",
+        title:    "Protecting Client Data and Staff Privacy",
+        subtitle: "Technical and procedural controls to protect privileged communications and personal data",
+        content: [
+          {
+            heading: "Classification of Data at Blackstone Legal",
+            body: "Before implementing controls, data must be classified by sensitivity. At Blackstone Legal, four categories apply. Privileged and confidential: attorney-client communications, litigation strategy documents, witness statements all require highest protection. Access should be strictly limited to matter team. Client personal data: names, addresses, financial information, health details are GDPR Article 9 special category data where applicable. Firm operational data: financial records, staff HR files, business development materials. Public data: marketing materials, published articles, court judgments. Each category requires different handling, storage, and transmission controls.",
+          },
+          {
+            heading: "Authentication and Access Control",
+            body: "Every staff account at Blackstone Legal should use multi-factor authentication (MFA), a password plus a second factor such as an authenticator app code. This single control prevents the majority of account takeover attacks, including those following a successful phishing attack where credentials are captured. The principle of least privilege should be applied to the case management system: a conveyancing secretary should not have access to litigation files, and a trainee should not have access to partner-level correspondence. Access should be reviewed when staff change roles and revoked immediately upon departure.",
+          },
+          {
+            heading: "Encryption of Data at Rest and in Transit",
+            body: "All devices used for firm work such as laptops, mobile phones, tablets must have full disk encryption enabled. This ensures that if a device is lost or stolen, the data on it cannot be accessed without the decryption key. All client communications should use TLS-encrypted email where possible, and the firm should consider implementing a secure client portal for sharing sensitive documents rather than email attachments. Cloud storage used for case files must be encrypted at rest by the provider and access-controlled by the firm.",
+          },
+          {
+            heading: "Backup and Recovery",
+            body: "The ransomware attack on Blackstone's competitor resulted in 11 days of downtime. That outcome is primarily a backup failure, not just a security failure. Blackstone Legal should implement the 3-2-1 backup rule: three copies of all data, on two different media types, with one copy stored offsite or in an air-gapped cloud environment that ransomware cannot reach. Backups must be tested quarterly. A backup that has never been restored is a backup that may not work when needed. Recovery time objectives (RTOs) should be defined: how quickly must the firm be able to restore operations after an incident?",
+          },
+          {
+            heading: "Secure Remote Working",
+            body: "With staff working from home and court appearances increasingly conducted remotely, secure remote access is essential. The firm should require all remote access to firm systems to go through a VPN (Virtual Private Network), which encrypts traffic between the staff member's device and the firm's network. Home Wi-Fi networks should use WPA2 or WPA3 encryption with a strong passphrase. Staff should be advised never to access client files on public Wi-Fi without a VPN active. Screen privacy filters should be used when working in public spaces.",
+          },
+        ],
+      },
+      {
+        module:   "PART 04",
+        title:    "Building Blackstone Legal's Security Posture",
+        subtitle: "Policies, frameworks, and controls to establish and maintain organisational security",
+        content: [
+          {
+            heading: "The CIA Triad Applied to Legal Practice",
+            body: "Confidentiality, Integrity, and Availability map directly to the core obligations of a law firm. Confidentiality protects attorney-client privilege and GDPR compliance. Unauthorised access to client files is both a professional conduct failure and a regulatory breach. Integrity ensures that documents have not been tampered with. A contract or witness statement that has been altered without detection could have catastrophic consequences in litigation. Availability ensures the firm can operate. The ransomware incident at the competitor firm was primarily an availability failure, with secondary confidentiality implications under double extortion.",
+          },
+          {
+            heading: "Recommended Framework: NIST Cybersecurity Framework",
+            body: "The NIST Cybersecurity Framework organises security activities into five functions: Identify (understand what assets need protecting and what risks exist), Protect (implement safeguards), Detect (monitor for incidents), Respond (act when incidents occur), and Recover (restore operations). For Blackstone Legal, immediate priorities fall in the Identify and Protect categories. The firm does not yet have a complete asset inventory or basic access controls in place. Detection and response capabilities can be built once foundational protections are established.",
+          },
+          {
+            heading: "Policies Blackstone Legal Should Implement",
+            body: "Five policies are immediately required. An Acceptable Use Policy defining how firm devices and systems may be used. A Password and MFA Policy mandating minimum password complexity and MFA on all accounts. A Data Classification and Handling Policy defining how each data category is stored, transmitted, and disposed of. An Incident Response Policy defining what to do when a breach is suspected; who to call, what to preserve, when to notify the ICO. A Clean Desk Policy requiring staff to lock screens when away from their desks and secure physical documents.",
+          },
+          {
+            heading: "Incident Response for a Law Firm",
+            body: "When Blackstone Legal detects or suspects a breach, the response must balance security requirements with legal obligations. The six phases apply: Preparation (have the plan before the incident), Identification (confirm a breach has occurred), Containment (isolate affected systems to prevent spread), Eradication (remove the threat), Recovery (restore systems from clean backups), and Lessons Learned (document what happened and improve controls). Critically, the firm must notify the ICO within 72 hours of becoming aware of a personal data breach under GDPR. This timeline begins when the firm knows or should have known, not when the investigation is complete. Legal counsel should be involved from the Identification phase.",
+          },
+          {
+            heading: "Staff Training: The Most Cost-Effective Control",
+            body: "Technology controls can be bypassed by a well-crafted spear phishing email that tricks a staff member into voluntarily providing credentials. Annual cybersecurity awareness training covering phishing recognition, safe handling of client data, remote working security, and incident reporting is the highest-return investment Blackstone Legal can make. Simulated phishing exercises, where the firm's IT provider sends test phishing emails to staff and measures click rates, provide baseline data and identify individuals who need additional training. Partners should participate in training alongside support staff as attackers target seniority.",
+          },
+        ],
+      },
+      {
+        module:   "PART 05",
+        title:    "Cybersecurity Capabilities for Blackstone Legal",
+        subtitle: "Recommended roles, external services, and career pathways in legal sector cybersecurity",
+        content: [
+          {
+            heading: "What Blackstone Legal Needs Right Now",
+            body: "At 45 staff, Blackstone Legal is too small to justify a full-time in-house security team. The realistic immediate actions are: engage a managed security service provider (MSSP) to monitor the network and respond to alerts, appoint an internal Data Protection Officer or designate an existing senior staff member as the data protection lead, and contract a reputable IT security firm to conduct an annual penetration test and vulnerability assessment. These three steps; monitoring, governance, and testing address the Detect, Identify, and Protect functions of the NIST framework at a cost proportionate to the firm's size.",
+          },
+          {
+            heading: "Cybersecurity Roles in Legal Services",
+            body: "As the legal sector matures its approach to cybersecurity, dedicated roles are emerging. Legal Technology Security Analyst: monitors the firm's systems, manages the MSSP relationship, and handles day-to-day security queries from staff. Data Protection Officer: ensures GDPR compliance, maintains records of processing, handles subject access requests, and leads breach notification. Cybersecurity Counsel: a qualified lawyer with cybersecurity expertise advising clients on data protection law, cyber incident response, and regulatory compliance. For individuals entering cybersecurity through the Cisco Junior Cybersecurity Analyst path, legal services firms represent a growing employment market with above-average sensitivity to data protection.",
+          },
+          {
+            heading: "Recommended Certifications for a Legal Sector Analyst",
+            body: "CompTIA Security+ provides the vendor-neutral foundation required for any security role. The Cisco CCST Cybersecurity certification is the direct output of the Junior Cybersecurity Analyst career path and it validates entry-level skills. For a role specifically in legal services, the CIPP/E (Certified Information Privacy Professional - Europe) certification from the IAPP demonstrates GDPR expertise and is highly valued by law firms and their clients. A combination of Security+ and CIPP/E positions an analyst well for a legal sector security or data protection role.",
+          },
+          {
+            heading: "Recommendations Summary for Blackstone Legal",
+            body: "Immediate actions (within 30 days): enable MFA on all accounts, implement a password manager firm-wide, back up all case files to an air-gapped offsite location, and deliver a phishing awareness session to all staff. Short-term actions (within 90 days): deploy full disk encryption on all devices, implement a VPN for remote access, draft the five core security policies, and engage an MSSP for network monitoring. Medium-term actions (within 12 months): conduct a penetration test, implement a secure client portal, achieve Cyber Essentials certification, and appoint a Data Protection Officer. These actions, taken in order, will move Blackstone Legal from its current exposed position to a defensible baseline.",
+          },
+        ],
+      },
+    ],
+
+    reflections: [
+      {
+        title: "Industry context transforms generic concepts into actionable intelligence",
+        text:  "Researching this report made clear how differently cybersecurity concepts land when applied to a specific industry. Ransomware is a general threat but double extortion against a law firm, with the threat of publishing privileged client communications, is a specific existential risk that demands a specific response. The most useful cybersecurity analysis is always industry-specific.",
+      },
+      {
+        title: "The human layer is the most important and most neglected",
+        text:  "Every major attack vector identified for Blackstone Legal; spear phishing, BEC, pretexting targets people, not technology. The firm could deploy the most sophisticated technical controls available and still be compromised by a partner clicking a well-crafted link. Staff training and a security-aware culture are prerequisites for everything else.",
+      },
+      {
+        title: "Compliance and security are related but not the same",
+        text:  "GDPR compliance requires notification and documentation. Security requires prevention and detection. A firm can be GDPR compliant and still suffer a devastating breach. Compliance sets a floor, not a ceiling. Blackstone Legal needs both, and they need to understand the difference.",
+      },
+      {
+        title: "This course provides the language everything else builds on",
+        text:  "The CIA triad, the NIST framework, the attack taxonomy are the reference points that appear in every subsequent course, every job description, and every security conversation. Having a firm grasp of these concepts before touching a command line or configuring a device means the technical work that follows has a clear purpose and context.",
+      },
+    ],
+
+    githubLink:     "https://github.com/oziomainya/cybersecurity-report",   // REPLACE with GitHub repo URL when ready
+    portfolioLink:  "https://oziomainya.github.io",   // REPLACE with portfolio URL when ready
+    authorLinkedIn: "https://linkedin.com/in/ozioma-inya-a46327304",   // REPLACE with LinkedIn URL when ready
+
+  };
+
+  /*
+  ==============================================================
+  DO NOT EDIT BELOW THIS COMMENT BLOCK
+  ==============================================================
+  */
+
+</script>
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#050505;--bg-2:#0c0c0c;--bg-card:#0f0f0f;--bg-code:#080808;
+  --green:#00ff41;--green-d:#00b32d;--green-dk:#001f08;
+  --cyan:#00e5ff;--cyan-d:#00a8c0;
+  --amber:#ffd600;--red:#ff4444;--text:#ccffcc;
+  --text-2:#5a8f5a;--text-m:#2a4a2a;
+  --border:rgba(0,255,65,.09);--border-s:rgba(0,255,65,.22);
+  --font:'JetBrains Mono','Courier New',monospace
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.7;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,255,65,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,65,.02) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.1) 2px,rgba(0,0,0,.1) 4px);pointer-events:none;z-index:999}
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(5,5,5,.97);border-bottom:1px solid var(--border);padding:0 2.5rem;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav-back{color:var(--text-2);text-decoration:none;font-size:11px;letter-spacing:.1em;transition:color .2s}
+.nav-back::before{content:'<- ';color:var(--text-m)}
+.nav-back:hover{color:var(--green)}
+.nav-id{color:var(--text-m);font-size:11px;letter-spacing:.1em}
+main{position:relative;z-index:1;max-width:800px;margin:0 auto;padding:6rem 2.5rem 5rem}
+.proj-header{margin-bottom:4rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border)}
+.proj-meta{display:flex;align-items:center;gap:.65rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.meta-cat{font-size:9px;letter-spacing:.15em;padding:3px 10px;border-radius:2px;background:rgba(0,229,255,.06);color:var(--cyan-d);border:1px solid rgba(0,229,255,.2)}
+.meta-status{font-size:9px;letter-spacing:.12em;display:inline-flex;align-items:center;gap:5px}
+.meta-status::before{content:'';width:6px;height:6px;border-radius:50%;animation:pulse 2s ease-in-out infinite}
+.meta-status.live{color:var(--green)}.meta-status.live::before{background:var(--green)}
+.meta-status.wip{color:var(--cyan)}.meta-status.wip::before{background:var(--cyan)}
+.meta-status.soon{color:var(--amber)}.meta-status.soon::before{background:var(--amber)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.meta-source{font-size:9px;letter-spacing:.08em;padding:3px 10px;border-radius:2px;background:rgba(0,229,255,.05);color:var(--cyan-d);border:1px solid rgba(0,229,255,.15)}
+.meta-date{font-size:10px;color:var(--text-m)}
+.proj-title{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;color:var(--green);letter-spacing:-.02em;margin-bottom:1rem;line-height:1.2}
+.proj-overview{font-size:13px;color:var(--text-2);line-height:2;max-width:640px}
+.proj-actions{display:flex;gap:.75rem;margin-top:2rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1.2rem;font-family:var(--font);font-size:11px;letter-spacing:.1em;cursor:pointer;transition:all .18s;text-decoration:none;border-radius:2px}
+.btn-p{background:var(--green-dk);color:var(--green);border:1px solid rgba(0,255,65,.3)}
+.btn-p:hover{background:var(--green);color:#030d06}
+.btn-s{background:transparent;color:var(--text-2);border:1px solid var(--border-s)}
+.btn-s:hover{color:var(--cyan);border-color:rgba(0,229,255,.3)}
+.section{margin-bottom:3.5rem}
+.sh{display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem;color:var(--text-2);font-size:12px;letter-spacing:.1em}
+.sh::before{content:'$';color:var(--green);font-size:14px;font-weight:700}
+.sh::after{content:'';flex:1;height:1px;background:var(--border)}
+.client-card{background:var(--bg-card);border:1px solid var(--border);border-radius:4px;padding:1.5rem;margin-bottom:1.5rem}
+.client-row{display:flex;justify-content:space-between;font-size:11px;padding:.4rem 0;border-bottom:1px solid var(--border)}
+.client-row:last-child{border-bottom:none}
+.client-label{color:var(--text-m);letter-spacing:.08em}
+.client-val{color:var(--text-2);text-align:right;max-width:60%}
+.client-trigger{background:rgba(255,214,0,.04);border:1px solid rgba(255,214,0,.12);border-radius:3px;padding:.85rem 1.1rem;font-size:11px;color:var(--text-2);line-height:1.9;margin-top:.75rem}
+.client-trigger-label{font-size:9px;color:var(--amber);letter-spacing:.12em;margin-bottom:.35rem}
+.obj-list{display:flex;flex-direction:column;gap:.6rem}
+.obj-item{display:flex;align-items:flex-start;gap:.75rem;background:var(--bg-card);border:1px solid var(--border);border-radius:3px;padding:.85rem 1.1rem;font-size:12px;color:var(--text-2);transition:border-color .2s}
+.obj-item:hover{border-color:var(--border-s)}
+.obj-num{color:var(--text-m);flex-shrink:0;min-width:22px}
+.tags-wrap{display:flex;flex-wrap:wrap;gap:.4rem}
+.tag{display:inline-block;padding:3px 10px;font-size:10px;border-radius:2px;letter-spacing:.04em;background:rgba(0,229,255,.05);color:var(--cyan-d);border:1px solid rgba(0,229,255,.14)}
+.part{background:var(--bg-card);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:1.5rem;transition:border-color .2s}
+.part:hover{border-color:var(--border-s)}
+.part-header{padding:1.25rem 1.5rem;border-bottom:1px solid var(--border)}
+.part-module{font-size:9px;color:var(--text-m);letter-spacing:.15em;margin-bottom:.4rem}
+.part-title{font-size:14px;font-weight:700;color:var(--green);margin-bottom:.25rem}
+.part-subtitle{font-size:11px;color:var(--text-2)}
+.part-body{padding:1.5rem}
+.content-block{margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.content-block:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.content-heading{font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.08em;margin-bottom:.6rem}
+.content-body{font-size:12px;color:var(--text-2);line-height:2}
+.reflections-list{display:flex;flex-direction:column;gap:1rem}
+.reflection{background:var(--bg-card);border:1px solid var(--border);border-radius:4px;padding:1.25rem;transition:border-color .2s}
+.reflection:hover{border-color:var(--border-s)}
+.reflection-n{font-size:9px;color:var(--text-m);letter-spacing:.15em;margin-bottom:.35rem}
+.reflection-title{font-size:12px;font-weight:700;color:var(--text);margin-bottom:.4rem}
+.reflection-text{font-size:12px;color:var(--text-2);line-height:1.9}
+footer{position:relative;z-index:1;text-align:center;padding:2rem;border-top:1px solid var(--border);color:var(--text-m);font-size:10px;letter-spacing:.1em}
+@media(max-width:620px){main{padding:5rem 1.25rem 3rem}nav{padding:0 1.25rem}.proj-title{font-size:1.5rem}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a id="nav-back" href="#" class="nav-back">Back to Portfolio</a>
+  <span class="nav-id" id="nav-id"></span>
+</nav>
+
+<main>
+  <header class="proj-header" id="proj-header"></header>
+
+  <div class="section">
+    <div class="sh">cat client_brief.txt</div>
+    <div id="client-card"></div>
+  </div>
+
+  <div class="section">
+    <div class="sh">cat objectives.txt</div>
+    <div class="obj-list" id="obj-list"></div>
+  </div>
+
+  <div class="section">
+    <div class="sh">cat skills.txt</div>
+    <div class="tags-wrap" id="tags-wrap"></div>
+  </div>
+
+  <div class="section">
+    <div class="sh">cat report.txt</div>
+    <div id="parts-list"></div>
+  </div>
+
+  <div class="section">
+    <div class="sh">cat reflections.txt</div>
+    <div class="reflections-list" id="reflections-list"></div>
+  </div>
+
+</main>
+
+<footer id="footer"></footer>
+
+<script>
+var sl = { soon:'COMING SOON', wip:'IN PROGRESS', live:'LIVE' };
+
+if(PROJECT.portfolioLink) document.getElementById('nav-back').href = PROJECT.portfolioLink;
+document.getElementById('nav-id').textContent = 'BLACKSTONE LEGAL: CYBERSECURITY AWARENESS AND THREAT ASSESSMENT REPORT';
+
+var gh  = PROJECT.githubLink    ? '<a href="' + PROJECT.githubLink + '" target="_blank" class="btn btn-p">View on GitHub</a>' : '';
+var pfl = PROJECT.portfolioLink ? '<a href="' + PROJECT.portfolioLink + '" class="btn btn-s">Back to Portfolio</a>' : '';
+document.getElementById('proj-header').innerHTML =
+  '<div class="proj-meta">' +
+    '<span class="meta-cat">CYBERSECURITY</span>' +
+    '<span class="meta-status ' + PROJECT.status + '">' + (sl[PROJECT.status] || PROJECT.status.toUpperCase()) + '</span>' +
+    '<span class="meta-source">CISCO INTRODUCTION TO CYBERSECURITY · JUNIOR CYBERSECURITY ANALYST PATH</span>' +
+    '<span class="meta-date">' + PROJECT.date + ' by ' + PROJECT.author + '</span>' +
+  '</div>' +
+  '<h1 class="proj-title">' + PROJECT.title + '</h1>' +
+  '<p class="proj-overview">' + PROJECT.overview + '</p>' +
+  ((gh || pfl) ? '<div class="proj-actions">' + gh + pfl + '</div>' : '');
+
+var cc = document.getElementById('client-card');
+cc.innerHTML =
+  '<div class="client-card">' +
+    '<div class="client-row"><span class="client-label">CLIENT</span><span class="client-val">' + PROJECT.client.name + '</span></div>' +
+    '<div class="client-row"><span class="client-label">INDUSTRY</span><span class="client-val">' + PROJECT.client.industry + '</span></div>' +
+    '<div class="client-row"><span class="client-label">SIZE</span><span class="client-val">' + PROJECT.client.size + '</span></div>' +
+    '<div class="client-row"><span class="client-label">KEY CONCERN</span><span class="client-val">' + PROJECT.client.concern + '</span></div>' +
+  '</div>' +
+  '<div class="client-trigger"><div class="client-trigger-label">INCIDENT TRIGGER</div>' + PROJECT.client.trigger + '</div>';
+
+var ol = document.getElementById('obj-list');
+PROJECT.objectives.forEach(function(o, i) {
+  ol.innerHTML += '<div class="obj-item"><span class="obj-num">' + String(i+1).padStart(2,'0') + '.</span><span>' + o + '</span></div>';
+});
+
+var tw = document.getElementById('tags-wrap');
+PROJECT.skills.forEach(function(s) {
+  tw.innerHTML += '<span class="tag">' + s + '</span>';
+});
+
+var pl = document.getElementById('parts-list');
+PROJECT.parts.forEach(function(p) {
+  var blocks = p.content.map(function(c) {
+    return '<div class="content-block"><div class="content-heading">' + c.heading + '</div><div class="content-body">' + c.body + '</div></div>';
+  }).join('');
+  pl.innerHTML +=
+    '<div class="part">' +
+      '<div class="part-header">' +
+        '<div class="part-module">' + p.module + '</div>' +
+        '<div class="part-title">' + p.title + '</div>' +
+        '<div class="part-subtitle">' + p.subtitle + '</div>' +
+      '</div>' +
+      '<div class="part-body">' + blocks + '</div>' +
+    '</div>';
+});
+
+var rl = document.getElementById('reflections-list');
+PROJECT.reflections.forEach(function(r, i) {
+  rl.innerHTML +=
+    '<div class="reflection">' +
+      '<div class="reflection-n">REFLECTION ' + String(i+1).padStart(2,'0') + '</div>' +
+      '<div class="reflection-title">' + r.title + '</div>' +
+      '<div class="reflection-text">' + r.text + '</div>' +
+    '</div>';
+});
+
+var lnk = PROJECT.authorLinkedIn
+  ? '<a href="' + PROJECT.authorLinkedIn + '" style="color:var(--green-d);text-decoration:none">' + PROJECT.author + '</a>'
+  : PROJECT.author;
+document.getElementById('footer').innerHTML =
+  '<p>' + lnk + ' &nbsp;.&nbsp; CYBERSECURITY PROJECT &nbsp;.&nbsp; CISCO INTRODUCTION TO CYBERSECURITY &nbsp;.&nbsp; <span style="color:var(--green)">LIVE</span></p>';
+</script>
+</body>
+</html>
